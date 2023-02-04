@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>Update Data</h1>
+<div mat-dialog-content>
+  
+  <div *ngIf="this.data">   
+   <div>
+    <mat-form-field class="form-input" appearance="outline">
+        <input matInput [(ngModel)]="this.data.selectedRow.Name" />
+      </mat-form-field>   
+   </div> 
+   <div>
+    <mat-form-field class="form-input" appearance="outline">
+        <input matInput [(ngModel)]="this.data.selectedRow.JobTitle" />
+      </mat-form-field>   
+   </div> 
+      <div>
+        <mat-form-field class="form-input" appearance="outline">
+            <input matInput [(ngModel)]="this.data.selectedRow.Age" />
+          </mat-form-field>  
+      </div>     
+  <div>
+    <mat-form-field class="form-input" appearance="outline">
+        <mat-label>Start date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="this.data.selectedRow.StartDate" />
+        <mat-datepicker-toggle
+        matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="form-input" appearance="outline">
+        <mat-label>End date</mat-label>
+        <input matInput [matDatepicker]="picker1" [(ngModel)]="this.data.selectedRow.EndDate" />
+        <mat-datepicker-toggle
+        matIconSuffix
+          [for]="picker1"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+  </div>    
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button mat-dialog-close cdkFocusInitial color="primary">Ok</button>
+</div>

@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+  }
+  .table-section{
+    width: 1170px;
+    overflow: scroll;
+  }
+  .btn-group{
+    display: flex;
+    justify-content: end;
+  }
+  .btn-group button{
+    margin-left: 5px;
+  }
+  .table-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
